@@ -18,9 +18,9 @@ O **Sistema Arte** cria um fluxo de solicitacao e acompanhamento de artes dentro
 - Data de entrega padrao:
   - `7 dias` apos a data atual
   - Horario fixo em `17:00`
-- Shortcode `[Sistema-Arte]` para exibir:
-  - Formulario de envio
-  - Tabela de demandas pendentes
+- Shortcodes disponíveis:
+  - `[Sistema-Arte]` - Formulário completo com envio de demandas e tabela de pendências
+  - `[Sistema-Arte-Acompanhar]` - Tabela individual para acompanhamento das demandas do usuário logado
 - Custom Post Type `Demandas de Arte`
 - Taxonomia de status com fluxo:
   - `Demanda`
@@ -52,11 +52,28 @@ O **Sistema Arte** cria um fluxo de solicitacao e acompanhamento de artes dentro
 4. Crie uma pagina e adicione o shortcode `[Sistema-Arte]`.
 
 ## Como usar
-1. O usuario acessa a pagina publica com o shortcode.
-2. Preenche o formulario.
-3. A demanda e salva com status inicial `Demanda`.
-4. A equipe interna acompanha pelo Kanban.
-5. Quando necessario, a demanda pode ser arquivada e depois restaurada pelo menu de arquivadas.
+
+### Shortcode `[Sistema-Arte]`
+1. Crie uma página no WordPress.
+2. Adicione o shortcode `[Sistema-Arte]` no conteúdo da página.
+3. O formulário de envio e a lista de demandas pendentes serão exibidos automaticamente.
+4. Usuários logados podem enviar novas demandas.
+5. A equipe interna gerencia as demandas pelo painel administrativo no menu "Sistema Arte".
+
+### Shortcode `[Sistema-Arte-Acompanhar]`
+1. Crie uma segunda página para acompanhamento.
+2. Adicione o shortcode `[Sistema-Arte-Acompanhar]`.
+3. Usuários logados verão uma tabela com todas as suas demandas solicitadas.
+4. A tabela exibe: ID, Título, Status (com indicador visual), Data de Entrega e Arte Pronta.
+5. Se houver arte final disponível, um link para download será exibido.
+
+### Fluxo de Trabalho
+1. O solicitante acessa a página com `[Sistema-Arte]` e preenche o formulário.
+2. A demanda é criada automaticamente com status `Demanda`.
+3. A equipe interna acompanha pelo Kanban e move os cards conforme o progresso:
+   - `Demanda` → `Fazer` → `Fazendo` → `Feito`
+4. Quando necessário, a demanda pode ser arquivada e depois restaurada pelo menu de arquivadas.
+5. O solicitante acompanha o progresso pela página com `[Sistema-Arte-Acompanhar]`.
 
 ## Observacoes
 - A lista de `Locais` e gerenciada pelo painel administrativo, sem precisar editar codigo.
