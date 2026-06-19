@@ -1,0 +1,239 @@
+.arte-board {
+	font-family: "Courier New", monospace;
+	color: #12233e;
+}
+
+.arte-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+	gap: 24px;
+	align-items: start;
+}
+
+.arte-card {
+	background: #ffffff;
+	border: 1px solid #d9e1ee;
+	border-radius: 18px;
+	box-shadow: 0 14px 30px rgba(18, 35, 62, 0.09);
+	padding: 28px;
+}
+
+.arte-card h2 {
+	margin: 0 0 24px;
+	font-size: 2rem;
+	color: #0068b3;
+	border-bottom: 1px solid #dde6f3;
+	padding-bottom: 12px;
+}
+
+.arte-form {
+	display: grid;
+	gap: 18px;
+}
+
+.arte-form label {
+	display: grid;
+	gap: 8px;
+	font-size: 0.95rem;
+}
+
+.arte-form input,
+.arte-form select,
+.arte-form textarea,
+.arte-form button {
+	font: inherit;
+}
+
+.arte-form small {
+	font: inherit;
+}
+
+.arte-form input,
+.arte-form select,
+.arte-form textarea {
+	width: 100%;
+	padding: 14px 16px;
+	border: 1px solid #c9d5e5;
+	border-radius: 10px;
+	background: #fbfcff;
+	box-sizing: border-box;
+}
+
+.arte-form input:focus,
+.arte-form select:focus,
+.arte-form textarea:focus {
+	outline: 2px solid #5f59ff;
+	outline-offset: 1px;
+	border-color: #5f59ff;
+}
+
+.arte-two-columns {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.arte-form button {
+	border: 0;
+	border-radius: 12px;
+	padding: 16px 22px;
+	background: linear-gradient(135deg, #4d58f5 0%, #5939d9 100%);
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.arte-form button:hover {
+	filter: brightness(1.04);
+}
+
+.arte-help-text {
+	color: #4f617f;
+	font-size: 0.8rem;
+	line-height: 1.5;
+}
+
+.arte-tracking-card {
+	width: 100%;
+}
+
+.arte-tracking-table a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.arte-status-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 0.82rem;
+	font-weight: 700;
+	background: #e7edf6;
+	color: #2f4768;
+}
+
+.arte-status-demanda {
+	background: #e5f0ff;
+	color: #2d5ca8;
+}
+
+.arte-status-fazer {
+	background: #fff3d6;
+	color: #9a6b00;
+}
+
+.arte-status-fazendo {
+	background: #e7f7ef;
+	color: #1f6a47;
+}
+
+.arte-status-feito {
+	background: #dcefd9;
+	color: #266443;
+}
+
+.arte-status-arquivada {
+	background: #ececec;
+	color: #5f5f5f;
+}
+
+.arte-muted-text {
+	color: #6a7890;
+}
+
+.arte-login-card {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.arte-login-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 18px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, #4d58f5 0%, #5939d9 100%);
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.arte-pending-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.arte-pending-table th,
+.arte-pending-table td {
+	padding: 14px 10px;
+	text-align: left;
+	border-bottom: 1px solid #e3eaf5;
+	vertical-align: top;
+}
+
+.arte-pending-table th {
+	font-size: 0.95rem;
+}
+
+.arte-priority {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 0.82rem;
+	font-weight: 700;
+}
+
+.arte-priority-baixa {
+	background: #dcefd9;
+	color: #266443;
+}
+
+.arte-priority-media {
+	background: #fff1b8;
+	color: #9a6b00;
+}
+
+.arte-priority-alta {
+	background: #ffd9d9;
+	color: #b73b3b;
+}
+
+.arte-notice {
+	padding: 14px 16px;
+	border-radius: 12px;
+	margin-bottom: 18px;
+}
+
+.arte-notice-success {
+	background: #e8f7ea;
+	color: #206334;
+}
+
+.arte-notice-error {
+	background: #ffe9e9;
+	color: #8f2b2b;
+}
+
+.arte-empty-state {
+	margin: 0;
+	color: #4f617f;
+}
+
+@media (max-width: 960px) {
+	.arte-grid,
+	.arte-two-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.arte-card {
+		padding: 20px;
+	}
+
+	.arte-card h2 {
+		font-size: 1.6rem;
+	}
+}

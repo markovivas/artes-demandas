@@ -1,0 +1,176 @@
+.arte-admin-wrap {
+	font-family: "Courier New", monospace;
+	color: #10233e;
+}
+
+.arte-admin-wrap > p {
+	max-width: 720px;
+}
+
+.arte-kanban {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(220px, 1fr));
+	gap: 18px;
+	margin-top: 20px;
+	align-items: start;
+}
+
+.arte-kanban-column {
+	background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+	border: 1px solid #d8e0ea;
+	border-radius: 16px;
+	padding: 16px;
+	min-height: 520px;
+}
+
+.arte-kanban-column header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.arte-kanban-column header h2 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.arte-kanban-column header span {
+	background: #10233e;
+	color: #ffffff;
+	padding: 5px 10px;
+	border-radius: 999px;
+	font-size: 0.8rem;
+}
+
+.arte-kanban-list {
+	display: grid;
+	gap: 14px;
+	min-height: 420px;
+}
+
+.arte-kanban-card {
+	background: #ffffff;
+	border: 1px solid #d7e0ec;
+	border-radius: 14px;
+	padding: 14px;
+	box-shadow: 0 10px 22px rgba(18, 35, 62, 0.08);
+	cursor: grab;
+}
+
+.arte-kanban-card.ui-sortable-helper {
+	box-shadow: 0 16px 30px rgba(18, 35, 62, 0.15);
+}
+
+.arte-kanban-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 8px;
+}
+
+.arte-kanban-card h3 {
+	margin: 0 0 8px;
+	font-size: 1rem;
+}
+
+.arte-kanban-card p {
+	margin: 0 0 12px;
+	color: #40516d;
+}
+
+.arte-kanban-card ul {
+	margin: 0 0 12px;
+	padding-left: 18px;
+	color: #31435c;
+}
+
+.arte-kanban-card a {
+	color: #2157d5;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.arte-attachment-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+	margin: 0 0 12px;
+	padding: 10px 12px;
+	border: 1px solid #dbe4ef;
+	border-radius: 10px;
+	background: #f8fbff;
+	color: #31435c;
+}
+
+.arte-kanban-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 8px;
+}
+
+.arte-archive-link {
+	color: #a03f22;
+}
+
+.arte-archive-table th,
+.arte-archive-table td {
+	vertical-align: middle;
+}
+
+.arte-table-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.arte-settings-form {
+	max-width: 760px;
+	margin-top: 18px;
+}
+
+.arte-danger-box {
+	max-width: 760px;
+	margin-top: 20px;
+	padding: 22px;
+	border: 1px solid #f0b7b7;
+	border-radius: 16px;
+	background: linear-gradient(180deg, #fff7f7 0%, #fff0f0 100%);
+}
+
+.arte-danger-box h2 {
+	margin-top: 0;
+	color: #8c1f1f;
+}
+
+.arte-danger-form code {
+	font-size: 0.95rem;
+}
+
+.arte-danger-button {
+	border-color: #b42318 !important;
+	color: #b42318 !important;
+}
+
+.arte-kanban-placeholder {
+	border: 2px dashed #9bb5e2;
+	border-radius: 14px;
+	min-height: 120px;
+	background: rgba(155, 181, 226, 0.15);
+}
+
+@media (max-width: 1280px) {
+	.arte-kanban {
+		grid-template-columns: repeat(2, minmax(260px, 1fr));
+	}
+}
+
+@media (max-width: 782px) {
+	.arte-kanban {
+		grid-template-columns: 1fr;
+	}
+}
