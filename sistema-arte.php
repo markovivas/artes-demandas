@@ -619,9 +619,14 @@ final class Sistema_Arte_Plugin {
 									<td><?php echo esc_html( get_the_title() ); ?></td>
 									<td><span class="arte-status-pill arte-status-<?php echo esc_attr( $this->get_status_slug( $post_id ) ); ?>"><?php echo esc_html( $this->get_status_label( $post_id ) ); ?></span></td>
 									<td><?php echo esc_html( $this->format_due_date( $due_date ) ); ?></td>
-									<td>
-										<?php if ( $final_art_id ) : ?>
-											<a href="<?php echo esc_url( wp_get_attachment_url( $final_art_id ) ); ?>" target="_blank" rel="noopener noreferrer">Baixar arte</a>
+									<td class="arte-final-art-cell">
+										<?php if ( $final_art_id ) :
+											$art_url = wp_get_attachment_url( $final_art_id );
+											$art_file = get_attached_file( $final_art_id );
+											$art_filename = $art_file ? basename( $art_file ) : basename( $art_url );
+										?>
+											<a href="<?php echo esc_url( $art_url ); ?>" target="_blank" rel="noopener noreferrer" class="arte-btn-visualizar">Visualizar arte</a>
+											<a href="<?php echo esc_url( $art_url ); ?>" download="<?php echo esc_attr( $art_filename ); ?>" class="arte-btn-baixar">Baixar arte</a>
 										<?php else : ?>
 											<span class="arte-muted-text">Aguardando</span>
 										<?php endif; ?>

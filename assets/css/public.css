@@ -223,6 +223,45 @@
 	color: #4f617f;
 }
 
+.arte-final-art-cell {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.arte-btn-visualizar,
+.arte-btn-baixar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 12px;
+	border-radius: 8px;
+	font-size: 0.82rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: filter 0.15s;
+	white-space: nowrap;
+}
+
+.arte-btn-visualizar {
+	background: #e5f0ff;
+	color: #2d5ca8;
+}
+
+.arte-btn-visualizar:hover {
+	filter: brightness(0.92);
+}
+
+.arte-btn-baixar {
+	background: #1a6b3c;
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+.arte-btn-baixar:hover {
+	filter: brightness(1.2);
+}
+
 @media (max-width: 960px) {
 	.arte-grid,
 	.arte-two-columns {
