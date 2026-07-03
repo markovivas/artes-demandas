@@ -436,13 +436,22 @@ final class Sistema_Arte_Plugin {
 			}
 		}
 
+		$author_id = get_current_user_id();
+
+		if ( current_user_can( 'edit_others_posts' ) && ! empty( $_POST['arte_author'] ) ) {
+			$selected_author = (int) $_POST['arte_author'];
+			if ( $selected_author > 0 && get_userdata( $selected_author ) ) {
+				$author_id = $selected_author;
+			}
+		}
+
 		$post_id = wp_insert_post(
 			array(
 				'post_type'    => self::POST_TYPE,
 				'post_status'  => 'publish',
 				'post_title'   => $title,
 				'post_content' => $details,
-				'post_author'  => get_current_user_id(),
+				'post_author'  => $author_id,
 			),
 			true
 		);
@@ -522,6 +531,25 @@ final class Sistema_Arte_Plugin {
 								</select>
 							</label>
 						</div>
+						<?php if ( current_user_can( 'edit_others_posts' ) ) : ?>
+							<label>
+								<span>Atribuir a (autor)</span>
+								<?php
+								wp_dropdown_users(
+									array(
+										'name'             => 'arte_author',
+										'id'               => 'arte_author',
+										'show_option_none' => 'Selecionar autor...',
+										'option_none_value' => '',
+										'role__in'         => array( 'administrator', 'editor', 'author', 'contributor' ),
+										'orderby'          => 'display_name',
+										'order'            => 'ASC',
+									)
+								);
+								?>
+								<small class="arte-help-text">Atribua esta demanda a um usuario especifico.</small>
+							</label>
+						<?php endif; ?>
 						<label>
 							<span>Telefone/WhatsApp *</span>
 							<input type="text" name="arte_contact" class="arte-phone-input" placeholder="(99) 99999-9999" inputmode="numeric" maxlength="15" required>
