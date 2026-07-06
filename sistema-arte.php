@@ -541,7 +541,6 @@ final class Sistema_Arte_Plugin {
 										'id'               => 'arte_author',
 										'show_option_none' => 'Selecionar autor...',
 										'option_none_value' => '',
-										'role__in'         => array( 'administrator', 'editor', 'author', 'contributor' ),
 										'orderby'          => 'display_name',
 										'order'            => 'ASC',
 									)
